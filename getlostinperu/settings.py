@@ -32,8 +32,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['8000-guisselacp-getlostperu-lwk0p2iykik.ws.codeinstitute-ide.net','.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.com"]
-
+# CSRF_TRUSTED_ORIGINS = ["https://*.codeinstitute-ide.net", "https://*.herokuapp.com"]
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
