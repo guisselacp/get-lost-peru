@@ -1,3 +1,5 @@
+{% load static %}
+
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -19,6 +21,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+    <!-- Custom CSS-->    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -26,8 +30,13 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></a>
+            <!--img class="img-fluid rounded-lg img-shadow" src="{% static 'images/dogpark_lady.png' %}"
+                    alt="dogpark lady" id="dogpark_lady"-->
+            <a class="navbar-brand fw-light fs-1" href="{% url 'home' %}">
+                Get Lost In Peru
+            </a>
+            <!--a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Get<span class="red-Lost">Lost</span>in<span
+                        class="thin">|Peru</span></span></a-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,7 +50,7 @@
 
                 </ul>
                 <span class="navbar-text text-muted">
-                    adventures of a software developer
+                    Do you want explore Peru?
                 </span>
             </div>
         </div>
