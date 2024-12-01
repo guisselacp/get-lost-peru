@@ -29,6 +29,18 @@ body {
     background-color: #F9FAFC;
 }
 
+/*--carousel--*/
+.c-item {
+    height: 420px;
+}
+
+.c-img {
+    height: 100%;
+    object-fit: fill;
+    filter:brightness(0.9);
+}   
+
+
 .card {
     border: none;
     background-color: transparent;
