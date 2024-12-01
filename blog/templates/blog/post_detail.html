@@ -5,7 +5,14 @@
 
 <div class="container">
     <div class="text-center mb-5">
-        <img src="{% static 'images/huancayo.jpg' %}" class="border border-3 mt-5" alt="image" style="width: 70%;">
+        {% if "placeholder" in post.featured_image.url %}
+        <img src="{% static 'images/huancayo.jpg' %}" class="border border-3 mt-5" alt="image" style="width: 70%;"
+          alt="placeholder image">
+        {% else %}
+        <img src="{{ post.featured_image.url }}" class="border border-3 mt-5" alt="image" style="width: 70%;"
+          alt="{{ post.title }}">
+        {% endif %} 
+        <!--img src="{% static 'images/huancayo.jpg' %}" class="border border-3 mt-5" alt="image" style="width: 70%;"-->
     </div>
     <div class="col-9 fs-2 fw-bolder mt-2">
         <!-- Post title goes in these h1 tags -->
