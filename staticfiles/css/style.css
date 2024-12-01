@@ -29,16 +29,17 @@ body {
     background-color: #F9FAFC;
 }
 
-/*--carousel-*/
+/*--carousel--*/
 .c-item {
-    height: 400px;
+    height: 420px;
 }
 
 .c-img {
     height: 100%;
-    object-fit: cover;
-    filter:brightness(0.6);
-}
+    object-fit: fill;
+    filter:brightness(0.9);
+}   
+
 
 .card {
     border: none;
