@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- index.html content starts here -->
+<!-- carousel starts here --> 
+<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item c-item active">
+        <img src="{% static 'images/Paddington1.webp' %}" class="d-block c-img w-100" alt="paddington in macchu picchu">
+        <div class="carousel-caption top-1 mt-4">
+            {% if user.is_authenticated %}
+            <h1 class="display-1 fw-bolder text-capitalized">Get Lost in Peru</h1>
+            {% else %}
+            <p class="display-1 fw-bolder text-capitalized">Share your experiences</p>
+            <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
+            {% endif %}
+        </div>
+    </div>
+      <div class="carousel-item c-item">
+        <img src="{% static 'images/Paddington2.webp' %}" class="d-block c-img w-100" alt="paddington in the amazon">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</h1>
+            <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
+        </div>
+    </div>
+      <div class="carousel-item c-item">
+        <img src="{% static 'images/puno.jpg' %}" class="d-block c-img w-100" alt="titicaca lake">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 class="display-1 fw-bolder text-capitalized">Discover Peru</h1>
+            <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
