@@ -31,7 +31,7 @@ body {
 
 /*--carousel--*/
 .c-item {
-    height: 420px;
+    height: 440px;
 }
 
 .c-img {
@@ -48,6 +48,10 @@ body {
 
 .image-container {
     position: relative;
+}
+
+.profile-image {
+    width: 75%;
 }
 
 .image-flash {
