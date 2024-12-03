@@ -1,6 +1,5 @@
 from django import forms
 from .models import Post, Comment
-from djrichtextfield.widgets import RichTextWidget
 
 
 class PostForm(forms.ModelForm):
@@ -10,7 +9,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'featured_image', 'excerpt', 'content']
 
-        contents = forms.CharField(widget=RichTextWidget())
+        #contents = forms.CharField(widget=RichTextWidget())
 
         widget = {
             "excerpt": forms.Textarea(attrs={"rows": 5}),
