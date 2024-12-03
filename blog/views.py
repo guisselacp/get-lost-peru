@@ -1,11 +1,39 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
+from django.views import generic, View
+from django.views.generic import CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import PostForm, CommentForm
+
+from django.contrib.auth.mixins import (
+    UserPassesTestMixin, LoginRequiredMixin
+)
 
 # Create your views here.
+
+class AddPost(LoginRequiredMixin, CreateView):
+    """
+    A model to create a post
+    """
+    template_name = 'blog/blog_create.html'
+    model = Post
+    form_class = PostForm
+    success_url = '/blog/'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+
+        # save the post instance
+        response = super().form_valid(form)
+
+        # check if the post is approved or awaiting approval
+        if self.object.status == 0:
+            messages.info(
+                self.request, 'Post submitted and awaiting approval!')
+
+        return response
+
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"

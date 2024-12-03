@@ -4,6 +4,24 @@
 
 <!-- index.html content starts here -->
 
+<div class="container my-4 text-center">
+    <div class="row align-items-center">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="section-title mb-4" id="auth">Posts</h1>
+        </div>
+        <!-- If user is logged in, show Add Post icon -->
+        <div class="col-md-3 text-md-end">
+            {% if user.is_authenticated %}
+            <a href="{% url 'blog_create' %}" class="my-5" title="Add a Blog"-->
+                <img src="{% static '../static/icons/file-circle-plus-solid.svg' %}" alt="add blog"
+                    class="fa-solid fa-file-circle-plus fa-2xs">
+            </a>
+                       
+            {% endif %}
+        </div>
+    </div>
+</div>
+
 <!-- blog post content starts here -->
 <div class="container-fluid">
     <div class="row">
