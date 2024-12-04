@@ -12,7 +12,7 @@
         <!-- If user is logged in, show Add Post icon -->
         <div class="col-md-3 text-md-end">
             {% if user.is_authenticated %}
-            <a href="{% url 'blog_create' %}" class="my-5" title="Add a Blog"-->
+            <a href="{% url 'blog_create' %}" class="my-5" title="Add a Post"-->
                 <img src="{% static '../static/icons/file-circle-plus-solid.svg' %}" alt="add blog"
                     class="fa-solid fa-file-circle-plus fa-2xs">
             </a>
@@ -51,7 +51,10 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}}
+                            <p class="card-text text-muted h6">{{ post.created_on}} <img
+                                src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                                alt="heart like icon">
+                            {{ post.number_of_likes }}
                             </p>
                         </div>
                     </div>

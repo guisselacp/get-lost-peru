@@ -32,9 +32,37 @@
                 <article class="card-text">
                     {{ post.content | safe }}
                 </article>
-            </div>
-        </div>
-    </div>
+                <div class="row">
+                  <div class="col-4">
+                      <div class="d-flex flex-row flex-md-column">
+                          <!-- Allow logged in users to interact with like icon -->
+                          <div>
+                              {% if user.is_authenticated %}
+                              <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                  {% csrf_token %}
+                                  {% if liked %}
+                                  <button type="submit" name="postlike_id" value="{{post.slug}}"
+                                      class="like-button">
+                                      <img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                                          alt="heart like icon">
+                                  </button>
+                                  {% else %}
+                                  <button type="submit" name="postlike_id" value="{{post.slug}}"
+                                      class="like-button">
+                                      <img src="{% static 'icons/heart-regular.svg' %}" class="like-icon"
+                                          alt="heart outline like icon">
+                                  </button>
+                                  {% endif %}
+                              </form>
+                              {% else %}
+                              <span class="like-icon"><img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                                      alt="heart like icon"></span>
+                              {% endif %}
+                              <strong><span class="like-num"> {{ post.number_of_likes }}</span></strong>
+                            </div>
+                        </div>
+          </div>
+      </div>
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">
