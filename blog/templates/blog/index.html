@@ -49,11 +49,16 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.excerpt }}</p>
                             </a>
-
                             <hr />
+                            {% if post.number_of_likes == 0 %}
+                            <p class="card-text text-muted h6">{{ post.created_on}} <img
+                                src="{% static 'icons/heart-regular.svg' %}" class="like-icon"
+                                alt="heart like icon">
+                            {% else %}
                             <p class="card-text text-muted h6">{{ post.created_on}} <img
                                 src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
                                 alt="heart like icon">
+                            {% endif %}
                             {{ post.number_of_likes }}
                             </p>
                         </div>
