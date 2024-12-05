@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic import CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
 
@@ -58,6 +59,11 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+
+    liked = False
+    if post.likes.filter(id=request.user.id).exists():
+        liked = True
+
     # Here send the comment info - POST
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -80,8 +86,11 @@ def post_detail(request, slug):
             "comments":comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            'liked': liked,
         },
     )
+
+
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -90,6 +99,9 @@ def comment_edit(request, slug, comment_id):
 
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
@@ -128,7 +140,7 @@ class PostLike(View):
     """
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
-
+       
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
