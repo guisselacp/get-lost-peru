@@ -3,6 +3,7 @@
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'mainpage' as mainpage_url %}
+{% url 'userprofile' as userprofile_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -61,6 +62,9 @@
                     </li>
                    
                     {% if user.is_authenticated %}
+                    <li class="nav-item">
+	                    <a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">Profile</a>
+                    </li>
                     <li class="nav-item">
 	                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
