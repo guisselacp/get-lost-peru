@@ -60,12 +60,18 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active" aria-current="page{% endif %}" href="{% url 'about' %}">About</a>
                     </li>
-                   
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-	                    <a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">Profile</a>
+                    <li class="nav-item justify-content-end ">
+	                    <!--img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                                    alt="heart outline icon"-->
+                        <a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">
+                            <img src="{% static 'icons/user-solid.svg' %}" class="user-icon" alt="user icon">{{user.username}}</a>
+                        <!--a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}"><i class="fa-solid fa-user"></i> {{user.username}}</a-->
+                        <!--a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">Profile</a-->
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item justify-content-end ">
 	                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
@@ -77,9 +83,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    Do you want explore Peru?
-                </span>
+                
             </div>
         </div>
     </nav>
