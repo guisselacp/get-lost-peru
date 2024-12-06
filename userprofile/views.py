@@ -5,9 +5,9 @@ from blog.models import Post
 
 @login_required
 def userprofile(request):
-    posts = Post.objects.filter(author=request.user)
+    post_list = Post.objects.filter(author=request.user)
 
     return render(request, 'userprofile/userprofile.html', {
-        'posts': posts,
+        'post_list': post_list,
     })
    
