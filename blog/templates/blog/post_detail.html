@@ -55,8 +55,13 @@
                                 {% endif %}
                             </form>
                             {% else %}
-                            <span class="like-icon"><img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                            {% if post.number_of_likes == 0 %}
+                            <span class="like-icon"><img src="{% static 'icons/heart-regular.svg' %}" class="like-icon"
                                     alt="heart outline icon"></span>
+                            {% else %}
+                            <span class="like-icon"><img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
+                              alt="heart outline icon"></span>
+                            {% endif %}  
                             {% endif %}
                             <strong><span class="like-num"> {{ post.number_of_likes }}</span></strong>
 
