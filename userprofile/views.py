@@ -10,4 +10,7 @@ def userprofile(request):
     return render(request, 'userprofile/userprofile.html', {
         'post_list': post_list,
     })
-   
+
+
+    # template_name = "userprofile/userprofile.html"
+    # paginate_by = 6

@@ -20,6 +20,10 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+        {% if request.user == post.author %}
+        <span class="justify-content-end">Edit</span>
+        <span class="justify-content-end">Delete</span>
+        {% endif %}
     </div>
 </div>
 
@@ -81,6 +85,7 @@
             <hr>
         </div>
     </div>
+  
     <!-- Displaying Comments -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
