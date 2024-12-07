@@ -66,10 +66,10 @@
                     <li class="nav-item justify-content-end ">
 	                    <!--img src="{% static 'icons/heart-solid.svg' %}" class="like-icon"
                                     alt="heart outline icon"-->
-                        <a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">
-                            <img src="{% static 'icons/user-solid.svg' %}" class="user-icon" alt="user icon">{{user.username}}</a>
+                        <!--a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">
+                            <img src="{% static 'icons/user-solid.svg' %}" class="user-icon" alt="user icon">{{user.username}}</a-->
                         <!--a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}"><i class="fa-solid fa-user"></i> {{user.username}}</a-->
-                        <!--a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">Profile</a-->
+                        <a class="nav-link {% if request.path == userprofile_url %}active" aria-current="page{% endif %}" href="{% url 'userprofile' %}">My Posts</a>
                     </li>
                     <li class="nav-item justify-content-end ">
 	                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
@@ -102,7 +102,8 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        <p class="text-end m-3"><img src="{% static 'icons/user-solid.svg' %}" class="user-icon" alt="user icon"> {{ user }}</p>
+        <!--p class="text-end m-3">You are logged in as {{ user }}</p-->
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}

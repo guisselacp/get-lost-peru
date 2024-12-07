@@ -78,7 +78,8 @@ body {
 .user-icon {
     width: 20px;
     height: 20px;
-    margin: 6px;
+    /*--margin: 6px;--*/
+    
 }
 
 .like-num {
