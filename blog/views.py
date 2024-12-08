@@ -147,6 +147,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+
 @login_required
 def edit(request, pk): 
     post = get_object_or_404(Post, pk=pk, author=request.user)
@@ -155,8 +156,8 @@ def edit(request, pk):
         form = EditPostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            messages.success(request, "Post successfully edited!")
-            return redirect('post_detail.html', pk=post.pk)
+            messages.success(request, "Your post has been updated!")
+            return redirect('post_detail', pk=post.pk)
     else:
         form = EditPostForm(instance=post)
 
@@ -164,7 +165,8 @@ def edit(request, pk):
         'form': form,
         'title': 'Edit post',
     })
-
+     
+   
 @login_required
 def delete(request, pk):
     post = get_object_or_404(Post, pk=pk, author=request.user)
