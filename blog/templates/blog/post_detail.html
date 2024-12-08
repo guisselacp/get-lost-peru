@@ -20,10 +20,18 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <!-- Post author goes before the | the post's created date goes after -->
         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-        {% if request.user == post.author %}
-        <span class="justify-content-end">Edit</span>
-        <span class="justify-content-end">Delete</span>
-        {% endif %}
+        <div class="container d-flex justify-content-end">
+          <div class="row edit-delete">
+            {% if request.user == post.author %}
+            <div class=" col fs-6">
+              <a class="btn btn-warning" href="{% url 'edit' post.id %}" role="edit_button">Edit</a>
+            </div>
+            <div class=" col fs-6"></div>
+              <a class="btn btn-danger" type="submit" href="{% url 'delete' post.id %}" role="delete_button">Delete</a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
     </div>
 </div>
 
@@ -108,7 +116,7 @@
                 </div>
                 {% if not comment.approved and comment.author == user %}
                 <p class="approval">
-                    This comment is awaiting approval
+                    This comment is awaiting approval!
                 </p>
                 {% endif %}
                 {% if user.is_authenticated and comment.author == user %}

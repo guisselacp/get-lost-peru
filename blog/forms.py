@@ -22,6 +22,26 @@ class PostForm(forms.ModelForm):
             "content": "Content",
         }
 
+class EditPostForm(forms.ModelForm):
+    """ Form to edit a post """
+    
+    class Meta:
+        model = Post
+        fields = ['title', 'featured_image', 'excerpt', 'content']
+
+        #contents = forms.CharField(widget=RichTextWidget())
+
+        widget = {
+            "excerpt": forms.Textarea(attrs={"rows": 5}),
+        }
+
+        labels = {
+            "title": "Post Title",
+            "featured_image": "Post Image",
+            "excerpt": "Excerpt",
+            "content": "Content",
+        }
+
 
 class CommentForm(forms.ModelForm):
     class Meta:

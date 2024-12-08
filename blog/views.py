@@ -1,11 +1,12 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import CreateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 
 from .models import Post, Comment
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm, EditPostForm
 
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
@@ -144,3 +145,33 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+@login_required
+def edit(request, pk): 
+    post = get_object_or_404(Post, pk=pk, author=request.user)
+
+    if request.method == 'POST':
+        form = EditPostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Post successfully edited!")
+            return redirect('post_detail.html', pk=post.pk)
+    else:
+        form = EditPostForm(instance=post)
+
+    return render(request, 'blog/blog_create.html', {
+        'form': form,
+        'title': 'Edit post',
+    })
+
+@login_required
+def delete(request, pk):
+    post = get_object_or_404(Post, pk=pk, author=request.user)
+    if request.method == 'POST':
+       post.delete()
+       messages.success(request, "Post successfully deleted!")
+       return redirect('userprofile:userprofile')
+    return render( request,'delete.html', {
+        'post':post
+    })
