@@ -87,6 +87,10 @@ body {
     
 }
 
+.edit-delete {
+    padding-right: 5px;
+}
+
 .profile-image {
     width: 75%;
 }
