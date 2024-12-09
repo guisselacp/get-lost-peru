@@ -157,7 +157,7 @@ def edit(request, pk):
         if form.is_valid():
             form.save()
             messages.success(request, "Your post has been updated!")
-            return redirect('post_detail', pk=post.pk)
+            return redirect('post_detail', slug=post.slug)
     else:
         form = EditPostForm(instance=post)
 
@@ -173,7 +173,7 @@ def delete(request, pk):
     if request.method == 'POST':
        post.delete()
        messages.success(request, "Post successfully deleted!")
-       return redirect('userprofile:userprofile')
+       return redirect('userprofile')
     return render( request,'delete.html', {
         'post':post
     })

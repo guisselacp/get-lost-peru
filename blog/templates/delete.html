@@ -8,7 +8,7 @@
         {% csrf_token %}
         <h3 class="fw-light">Are you sure you want delete this post ..?</h3><br>
         <input class="btn btn-danger" type="submit" value="Delete">
-        <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">Cancel</a>
+        <a href="{% url 'post_detail' slug=post.slug %}" class="btn btn-primary">Cancel</a>
     </form>
 </div>
 {% endblock %}
