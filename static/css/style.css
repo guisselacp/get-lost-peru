@@ -46,9 +46,17 @@ body {
     background-color: transparent;
 }
 
+.card-img-top {
+    height: 370px;
+    width: 100%;
+    object-fit: cover;
+}
+
 .image-container {
     position: relative;
 }
+
+
 
 .text-md-end {
     height: 100px;
@@ -93,6 +101,8 @@ body {
 
 .profile-image {
     width: 75%;
+    border: #020a0a;
+    border-style: dotted;
 }
 
 .image-flash {
@@ -161,11 +171,13 @@ body {
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
+    font-size: 20px;
 }
 
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+    font-size: 10px;
 }
 
 .btn-signup,
