@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Get Lost in Peru is a webpage where ....s. GetLostInPeru has been developed as part of the Code Institute's Full-Stack Developer course, focusing on Django and Bootstrap frameworks, database manipulation, and CRUD functionality. It is for educational purposes only.
+Get Lost in Peru is a blog webpage where a site user can view information about the most essential tips and recommendations if you are planning to visit Peru. The webpage aims to share experiences through posts. Registered users will also be able to interact with the website by adding comments to posts. And if they are interested in a post, they can add a like to it.
+
+GetLostInPeru has been developed as part of the Code Institute's Full-Stack Developer course, focusing on Django and Bootstrap frameworks, database manipulation, and CRUD functionality. It is for educational purposes only.
 
 View live site here : [GetLostInPeru](https://project-get-lost-in-peru-becd606e7388.herokuapp.com/)  
   
@@ -63,29 +65,32 @@ For Admin access with relevant sign-in information: [GetLostInPeru Admin](https:
   - [Acknowledgements](#acknowledgements)
  
 ## Overview
-GetLostInPeru is an social media and blog post app for ...
+GetLostInPeru is a blog webpage that encourages visits to Peru. Users are invited to:
 
-- Join the GetLostInPeru community
-- Create their own profiles (No)
-- Add and interact with posts
-- Manage their posts
-- Upload their favourite snaps from the park
-- Discover more about Peru country
+- Join the GetLostInPeru blog.
+- Add and interact with posts.
+- Manage their posts.
+- Discover more about Peru country.
+- Get relevant information about tourist places.
+  
 
-Get Lost in Peru is accessible via all browsers with full responsiveness on different screen sizes. Its aims is to share experiences and recommendations in Peru. The user can interact with each other ......
+Get Lost in Peru is accessible via all browsers and is fully responsive to different screen sizes. It aims to share experiences and recommendations in Peru. 
+As a user, you can access all published posts, with their comments and the number of likes each post has.
+As a registered user, you can share your experiences, questions, doubts, and tips. Also, if you think a post is captivating you will be able to like it.
+
 
 # UX - User Experience
 
 ## Design Inspiration
 
-I think the key to carrying out a project is the passion for the subject you are going to do. In this case, I combine my interest in traveling with the love for my country, which is Peru. I want to created a website with pastel colors because I want the images and the content to be the protagonist.
+The key to carrying out a project is the passion for the subject you are going to do. In this case, I combine my interest in travelling with my love for my country, Peru. 
 
 ### Colour Scheme
 
-The colour scheme and logo drove the design of the website. I wanted to create a 'clear' environment for the user to create the connection with the enjoyment that they would have with sharing posts. This combination also yielded a high contrast ratio of 19.44 for accessibility, with my colour scheme also passing a Colour Blind Safe check via [Adobe Color](https://color.adobe.com/create/color-wheel). 
+The colour scheme and logo drove the design of the website. I wanted to create a clear webpage for that reason I selected pastel colors because I want the images and the content to be the protagonist. My colour scheme passed a color Blind Safe check via [Adobe Color](https://color.adobe.com/create/color-wheel). 
 
 
-![screenshot of colour scheme](documentation/final_views/color.png)  
+![screenshot of colour scheme](documentation/final_views/colors.png)  
 *Colour Scheme for GetLostInPeru website*
 
 ![colour blind safe colour swatch](documentation/final_views/color_blind_safe.png)  
