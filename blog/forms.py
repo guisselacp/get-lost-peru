@@ -1,5 +1,6 @@
 from django import forms
 from .models import Post, Comment
+from django_summernote.admin import SummernoteModelAdmin
 
 
 class PostForm(forms.ModelForm):
