@@ -1,5 +1,5 @@
 body {
-    background-color: #FF8966;
+    background-color: #E0816C;
 }
 
 .brand {
@@ -18,15 +18,15 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #f0f4c6;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #FA7F36;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #DCE8CF;
 }
 
 /*--carousel--*/
@@ -55,7 +55,6 @@ body {
 .image-container {
     position: relative;
 }
-
 
 
 .text-md-end {
@@ -101,7 +100,7 @@ body {
 
 .profile-image {
     width: 75%;
-    border: #020a0a;
+    border: #f0f4c6;
     border-style: dotted;
 }
 
@@ -110,7 +109,7 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #80253c;
+    background-color: #E6B0B0;
 }
 
 .scale {
@@ -134,8 +133,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #4074ac;
-    color: white;
+    background-color: #E0816C;
+    color: #B5E9EA;
     position: relative;
 }
 
@@ -151,7 +150,7 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #4074ac;
+    background: #FA7F36;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -165,31 +164,32 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #E0816C;
 }
 
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
-    font-size: 10px;
+    color: #FA7F36;
+    font-size: 20px;
 }
 
 .btn-signup,
-.btn-edit {
-    background-color: #188181;
+.btn-edit,
+.btn-submit {
+    background-color: #FA7F36;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background-color: #f0f4c6;
+    color: #FA7F36;
 }
 
 .link {
