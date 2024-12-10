@@ -31,7 +31,7 @@ class AddPost(LoginRequiredMixin, CreateView):
 
         # check if the post is approved or awaiting approval
         if self.object.status == 0:
-            messages.info(
+            messages.success(
                 self.request, 'Post submitted and awaiting approval!')
 
         return response

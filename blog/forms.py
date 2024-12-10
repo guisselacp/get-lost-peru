@@ -1,6 +1,6 @@
 from django import forms
 from .models import Post, Comment
-from django_summernote.admin import SummernoteModelAdmin
+from django_summernote.widgets import SummernoteWidget
 
 
 class PostForm(forms.ModelForm):
@@ -10,10 +10,9 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'featured_image', 'excerpt', 'content']
 
-        #contents = forms.CharField(widget=RichTextWidget())
-
         widget = {
             "excerpt": forms.Textarea(attrs={"rows": 5}),
+            "content": SummernoteWidget(),
         }
 
         labels = {
