@@ -36,6 +36,7 @@ For Admin access with relevant sign-in information: [GetLostInPeru Admin](https:
     - [Epic - Photo Gallery](#epic---photo-gallery)
     - [Epic - Visit Us/Reviews](#epic---visit-usreviews)
   - [Scope Plane](#scope-plane)
+    - [Security](#security)
   - [Structural Plane](#structural-plane)
   - [Skeleton \& Surface Planes](#skeleton--surface-planes)
     - [Wireframes](#wireframes)
@@ -98,157 +99,114 @@ The colour scheme and logo drove the design of the website. I wanted to create a
 
 ### Font
 
+I'm using [Google Fonts](https://fonts.google.com/), I selected 'Roboto' and 'Lato' fonts to my webpage.
 
-
-  
+![example Roboto font](documentation/final_views/roboto_font.png) 
+![example Lato font](documentation/final_views/lato_font.png) 
 # Project Planning  
  
 ## Strategy Plane
 
-The project goal was to build an uncomplicated blog app.
+The project goal was to build an uncomplicated blog app to promote visits to Peru and at the same time provide information regarding places that could be visited.
+Along the way, I thought it would be more interactive if users could add posts with essential content, which the site administrator should validate. 
 
 
 ### Site Goals
 
-
-- Easy UI for quick fulfillment of feature CRUD functionalities
-- UX remains the same whether on mobile, tablet or desktop
-- Scalable idea, for addition of future features to easily grow the business
+- A friendly UI for easy navigation.
+- UX is the same whether on desktop, tablet and mobile.
+- If in the future you want to add new features, that is possible because the project is ready to expand.
 
 ## Agile Methodologies - Project Management
 
-GetLostInPeru is my first project following Agile planning methods. As someone who loves to prepare and plan, it was a joy to get to know and use. I used my [Github Projects Board](https://github.com/users/) to plan and document all of my work.
+GetLostInPeru is a project that follow the Agile planning methods.  I used my [Github Projects Board](https://github.com/users/guisselacp/projects/4) to plan and document the project.
+
+![User Stories](documentation/final_views/Get_Lost_In_Peru_User_Stories.png) 
 
 ### MoSCoW Prioritization
 
-I chose to follow the MoSCoW Prioritization method for GetLostInPeru, identifying and labelling my:
+I used the MoSCoW Prioritization method for GetLostInPeru, with this three label types:
 
-- **Must Haves**: the 'required', critical components of the project. Completing my 'Must Haves' helped me to reach the MVP (Minimum Viable Product) for this project early, allowing me to develop the project further than originally planned.
-  
-- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
-- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
-- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. 
+- **Must Have**: the 'required', components for this project. This allows me to define the "essential" to achieve the MVP (minimum viable product).
+- **Should Have**: the components that are valuable to the project but not is indispensable at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Have**: features that could be implemented but are not urgent.
+
 
 ### Sprints
 
-
-My Sprints are representative of a general timeframe of focus on the stated areas, with study, project work and running a household, some sprints timeframes blended with each other as work was completed during every available free moment.
+Although the project's duration was reasonable, it was a challenge to achieve it since, although I was clear about what I wanted to do, it was challenging to implement it.
 
 
 ## User Stories
 
-User stories and features recorded and managed on [GitHub Projects](<https://github.com/users/amylour/projects/4>)
+User stories and features on [GitHub Projects](<https://github.com/users/amylour/projects/4>)
 
 
 ### Visitor User Stories
 
 | User Story | Priority |
 |----------------------------------------------------------------------------------------------------------------------------|---------------|
-| As a **user**, I would like to **view the websites home page** so that I can **learn about it and the services it offers** | **MUST HAVE** |
-| As a **user**, I can **find the websites navigation area** so that I **may easily navigate around the website** | **MUST HAVE** |
-| As a **user**, I can **see the sites social media links at the bottom of the webpage** so that I can **visit, contact the business and follow them online** | **MUST HAVE** |
-| As a **user**, I can **view any error pages with a 'Home' button** so that I **can get back to the homepage easily** | **MUST HAVE** |
-| As a **user**, I want **to see a message when I have successfully/unsuccessfully completed an action** so that I can **receive feedback from my interaction with the website** | **MUST HAVE** |
+| As a **site user**, I can **find the website navigation area** so that **I may easily navigate around the website.** | **MUST HAVE** |
+| As a **site user**, I can **click on the About** so that **I can read and understand about the site** | **MUST HAVE** |
+| As a **site user**, I can **see a message when I have successfully/unsuccessfully completed an action** so that **I can receive feedback from my interaction with the website.** | **MUST HAVE** |
+| As a **site user**, I can **fill out a form** so that **I can contact the site owner.** | **COULD HAVE** |
+| As a **site user** I can **enter my username and password** so that **I can register an account with the website.** | **MUST HAVE** |
 
-### Epic - User Profile
 
-| User Story | Priority |
-|----------------------------------------------------------------------------------------------------------------------------|---------------|    
-| As a **user**, I can **use my email and password to login to my profile account** so that I can **use my profile to connect to the websites features** | **MUST HAVE** |
-| As a **user**, I can **enter my email and password** so that I can **register an account with the website** | **MUST HAVE** |
-| As a **user**, I can **enter my personal details** so that I can **create an account with FreeFido** | **MUST HAVE** |
-| As a **user**, I can **receive feedback in the form of a logout page** so that **I can confirm that I have been logged out successfully** | **MUST HAVE** |
-| As a **user**, I can **edit my user profile** to **update my personal details** | **MUST HAVE** |
-| As a **user**, I can **click a delete button in my user profile setup** so that I **can delete all personal data, photos and bookings that are connected to me on the website** | **COULD HAVE** |
-
-### Epic - Articles
+### Epic - Blog
 
 | User Story | Priority |
 |----------------------------------------------------------------------------------------------------------------------------|---------------|
-| As an **user**, I want to be able to **create and view articles** so that I can **learn more about dog related topics** | **MUST HAVE** |
-| As a **user**, I would like to **move to the next page** so that I can **view all of the articles** | **SHOULD HAVE** |
-| As a **user**, I would like to **view an article's likes** so that I can **find the most interesting articles** | **COULD HAVE** |
-| As a **user**, I can **visit the articles page** so that I **can read and interact with the articles** | **MUST HAVE** |
-| As a **user**, I can **click on an article** so that I **can view it's contents** | **MUST HAVE** |
-| As a **user**, I can **click a button icon** so that I **can like/unlike and article** | **COULD HAVE** |
-| As a **user**, I can **comment on a post** so that I can **interact and get involved with the conversation** | **SHOULD HAVE** |
-| As a **user**, I can **fill-in, edit and save an article text field** so that I can **create and share an article from my profile** | **MUST HAVE** |
-| As a **user**, I can **click on the edit button of my article** so that I can **edit the article and save it again** | **MUST HAVE** |
-| As a **user**, I can **click on the delete button on my own article page** so that I can **delete the article** | **MUST HAVE** |
-| As a **user**, I can **enter a search term into the search bar** so that I can **search for particular articles and articles with information topics that I am interested in** | **SHOULD HAVE** |
-| As a **user**, I can **click a delete button** so that I **can remove a comment that I have made** | **COULD HAVE** |
+| As a **registered user**, I can **create a post** so that **I can get feedback from other users.** | **MUST HAVE** |
+| As a **site user/admin**, I can **view comments on an individual post** so that **I can read the conversation.** | **MUST HAVE** |
+| As a **site user**, I can **modify or delete my comment on a post** so that **I can be involved in the conversation.** | **SHOULD HAVE** |
+| As a **site user**, I can **view a paginated list of posts** so that **I can select which post I want to view.** | **MUST HAVE** |
+| As a **site user**, I can **click on a post** so that **I can read the full text.** | **MUST HAVE** |
+| As a **registered user** I can **edit and delete my posts** so that **I can manage my own content on the site.** | **MUST HAVE** |
+| As a **registered user** I can **view a post's likes** so that **I can identify the most captivating posts.**| **COULD HAVE** |
+| As a **registered user** I can **click a button icon** so that **I can like posts or remove the like if I change my mind.** | **COULD HAVE** |
+|As a **registered user**, I can **see the option My_Posts in the navbar** so that **I can see my own added posts.** | **COULD HAVE** |
+
   
-### Epic - Booking
-
-| User Story | Priority |
-|----------------------------------------------------------------------------------------------------------------------------|---------------|
-| As a **user**, I can **view the booking home page** so that I can **learn about booking and see my active bookings** | **MUST HAVE** |
-| As a **user**, I can **use the bookings page** so that I can **make a booking at the dog park** | **MUST HAVE** |
-| As a **user**, I can **receive feedback via email when I make a booking** so that I **can confirm my booking and keep a copy of it in my email account** | **COULD HAVE** |
-| As a **user**, I can **edit my confirmed bookings** so that I **can choose a different day or time slot or add an extra dog** | **MUST HAVE** |
-| As a **user**, I can **click the 'Trash' icon under my booking** so that I can **delete that booking from my bookings list** | **MUST HAVE** |
-| As a **user**, I can **get feedback from the website** that will **explain that only four active bookings are allowed per person** | **SHOULD HAVE** |
-
-### Epic - Photo Gallery
-
-| User Story | Priority |
-|----------------------------------------------------------------------------------------------------------------------------|---------------|
-| As a **user**, I can **visit the gallery page** so that I can **view the gallery wall of photos** | **COULD HAVE** |
-| As a **user**, I can **click the upload image button on the Gallery page** so that I can **upload an image of my dog having fun in the park** | **COULD HAVE** |
-| As a **user**, I can **click the 'Trash' icon when I hover/click on a photo** so that I can **delete the photo** | **COULD HAVE** |
-
-### Epic - Visit Us/Reviews
-
-| User Story | Priority |
-|----------------------------------------------------------------------------------------------------------------------------|---------------|
-| As a **user**, I can **view the 'Visit Us' page** so that I can **see the businesses location and details** | **MUST HAVE** |
-| As a **user**, I can **fill out a review form** so that I can **leave feedback about my park visit** | **COULD HAVE** |
-| As a **user**, I can **edit my review** so that I can **correct a mistake or change my review** | **COULD HAVE** |
-| As a **user**, I can **click the delete button beside my review** so that I can **delete a review that I made** | **COULD HAVE** |
-    
-    
 ## Scope Plane
 
-As this would be a dual learning/building project using technologies that were new to me, such as Django, SQL, Bootstrap and Cloudinary, I was cautious to maintain consistent control over the scope of the project and not let my idea grow too big. With the sheer amount of files, I needed to lockdown my project features early on into manageable blocks so as not to lose track of the MVP. Following my learning of the Django MVT framework I was able to identify how to change the templated structure to produce different website features from my base HTML. This allowed me to build upon my original idea of 'Booking app' only, and to add a social experience around articles and shared images. Following Agile Planning Methodologies, I added my Developer Tasks, User Stories and Testing Tasks as issues on my [GitHub project board](https://github.com/users/amylour/projects/4), and set up Sprints to keep the flow of the project in check.
+The project duration was key to defining the MVP. Therefore, from the beginning, I considered creating a blog in which a user would have the option to add their own posts. Later, I decided to implement likes in the posts, which I find very attractive and give relevance to the content of a post.
+My experience with Django is essential, but the course's formulation taught me how to build a web page project.
 
 Essential features of my project were:
 
-- A striking, accessible website that fulfils user needs
-- Responsive website for users of mobile, tablet and desktop devices
-- User Authentication
-- User Profile creation and editing
-- Article feature with full CRUD functionality
-- Booking feature with full CRUD functionality
-- Gallery wall with adding/deletion of images
-- Business details to inform the user
+- An accessible website that provides relevant information to users.
+- Responsive website for use on different electronic devices (mobile, tablet and desktop)
+- User authentication.
+- Full CRUD functionality for posts and comments.
 
-Planning my project thoroughly from the start allowed me to identify areas of importance for MVP completion and satisfaction of assessment criteria, and to balance them with the feasibility of the features.
+### Security
 
+I used the following implementations:
+
+- AllAuth
+- CSFR Token
+  CSRF (Cross-Site Request Forgery) tokens have been included in the project to prevent vulnerabilities to malicious attacks and ensure that only forms from trusted domains can be used to POST data back into the database.
+
+![CSRF](documentation/final_views/CSRF.png) 
 
 ## Structural Plane
 
+A favicon of the Peruvian flag was added which fit with the theme of the website.
 
+![Flag Favicon](documentation/final_views/flag_favicon.png) 
 
+Standardise the size of images when displaying the post list. This makes it look more orderly.
+
+![post_list](documentation/final_views/size_post_list.png) 
 
  
-  
-
-A favicon was added of the Peru map to fit with the theme of the website.
-  
-
-![Peru map favicon](documentation/final_views/ball_favicon.png)  
-*Map Favicon*
-  
-
-   
-
-To allow for ease of responsiveness, each section was designed keeping in mind the switch from 'row' to 'column' when moving from Desktop to Mobile/Tablet view. This approach allowed me to add more features to the project early on by reusing and repurposing sections of code.
-
 ## Skeleton & Surface Planes
 
 ### Wireframes
 
-The wireframes for GetLostInPeru were created in Figma and were high-spec from the beginning as I was sure of my design concept. [Figma](www.figma.com) is an easy and fast design system for web and software mockups that allows for great control and testing of ideas particularly within the specific frame sizes which represent different devices. As I was using Bootstrap, I was confident that I had created a modular structure for my feature elements that would suit a grid system and that would allow them to easily work across different devices and screen sizes.
+The wireframes for GetLostInPeru were created in Figma [Figma](www.figma.com).
+Although it was the first time I used Figma, it was not so laborious and a good result was achieved.
 
 **Mobile/Tablet view for:**  
 
