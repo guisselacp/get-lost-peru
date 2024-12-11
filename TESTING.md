@@ -16,12 +16,11 @@ Return back to the [README.md](README.md) file.
     - [Lighthouse Scores](#lighthouse-scores)
     - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
   - [Manual Testing](#manual-testing)
-    - [User Input/Form Validation](#user-inputform-validation)
     - [Browser Compatibility](#browser-compatibility)
     - [Testing User Stories](#testing-user-stories)
     - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
   - [Bugs](#bugs)
-    - [Known Bugs](#known-bugs)
+    
 
 ## Validation
 
@@ -84,3 +83,57 @@ I don't have any JavaScript code added to the project.
 
 ### CSS Validation 
 
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file.
+
+![css validation](documentation/testing/css_valid.png)
+
+<hr> 
+   
+### Lighthouse Scores
+
+Lighthouse testing was carried out in Incognito mode to achieve the best result.
+
+**Desktop and Mobile**  
+
+![Lighthouse scores desktop](documentation/testing/desktop_lh.png)  
+*Desktop Home Page*  
+
+![Lighthouse scores mobile](documentation/testing/mobile_lh.png) 
+*Mobile Home Page*    
+
+<hr>  
+
+### Wave Accessibility Evaluation
+
+![WAVE Web Accessibility Evaluation Tools](documentation/testing/wave_report.png)
+
+I should point out that the two contrast errors are due to the use of the carousel with Bootstrap.
+
+![Contrast Errors](documentation/testing/contrast_errors.png)
+
+## Manual Testing
+
+### Browser Compatibility
+
+GetLostInPeru was tested and the CRUD functionalities could be performed correctly on the following browsers:
+
+- Chrome v114.0.5735.199
+- Firefox v114.0.2
+- Edge v114.0.1823.79
+
+### Testing User Stories
+
+The 25 proposed Users Stories were carried out and these were tested before being declared done.
+
+![User Stories - Done](documentation/testing/user_stories_done.png)
+
+## Bugs  
+Being part of the Full Stack Project, although it was pretty challenging due to the time for project deliveries, there were difficult moments. It is worth noting that I could always find the assistance of Tutor Support, which guided me correctly.
+
+Among the problems I had during the project, I could mention the following:
+
+- Heroku Application Error
+- Commit push failure
+- Terminal rebase error
+- Posts without slug field (I used slugify)
+- Deployment with Heroku did not reflect the changes in my style.css
