@@ -18,10 +18,10 @@
       <div class="row edit-delete">
         {% if request.user == post.author %}
         <div class="col fs-6">
-          <a class="btn btn-warning" href="{% url 'edit' post.id %}" role="edit_button">Edit</a>
+          <a class="btn btn-warning" href="{% url 'edit' post.id %}" role="edit">Edit</a>
         </div>
         <div class="col fs-6">
-          <a class="btn btn-danger" href="{% url 'delete' post.id %}" role="delete_button">Delete</a>
+          <a class="btn btn-danger" href="{% url 'delete' post.id %}" role="delete">Delete</a>
         </div>
         {% endif %}
       </div>
