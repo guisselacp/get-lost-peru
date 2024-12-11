@@ -9,6 +9,10 @@ body {
     color: #4A4A4F;
 }
 
+marquee {
+    font-size: 2.0rem;
+}
+
 .red-o {
     color: Peru;
 }
@@ -46,12 +50,19 @@ body {
 }
 
 .section {
-    margin-bottom: 10em;
+    margin-bottom: 22em;
+    padding: 25px 0;
+    margin: 25px 0;
   }
 
-#section-info {
-    background-color: whitesmoke;
+  #section-info {
+    background-color: #EECEAD;
   }
+
+.social-icon {
+    height: 1.7rem;
+}
+
 
 .card {
     border: none;
