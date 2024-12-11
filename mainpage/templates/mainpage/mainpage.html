@@ -25,23 +25,13 @@
       <div class="carousel-item c-item">
         <img src="{% static 'images/huancayo.jpg' %}" class="d-block c-img w-100" alt="huancayo huaytapallana">
         <div class="carousel-caption top-1 mt-4">
-            {% if user.is_authenticated %}
-            <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</h1>
-            {% else %}
-            <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</h1>
-            <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
-            {% endif %}
+          <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</h1>
         </div>
     </div>
       <div class="carousel-item c-item">
         <img src="{% static 'images/puno.jpg' %}" class="d-block c-img w-100" alt="titicaca lake">
         <div class="carousel-caption top-1 mt-4">
-            {% if user.is_authenticated %}
-            <h1 class="display-1 fw-bolder text-capitalized">Discover Peru</h1>
-            {% else %}
-            <h1 class="display-1 fw-bolder text-capitalized">Discover Peru</h1>
-            <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
-            {% endif %}
+           <h1 class="display-1 fw-bolder text-capitalized">Discover Peru</h1>
         </div>
       </div>
     </div>
