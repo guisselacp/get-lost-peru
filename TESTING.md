@@ -49,18 +49,13 @@ All HTML pages were validated and received a 'No errors or warning to show' resu
 | Posts | 0 | 0 |
 | Add Post | 0 | 0 |
 | Post_detail | 0 | 0 |
-| Edit Article | 0 | 0 |
-| Delete Article | 0 | 0 |
+| Edit Post | 0 | 0 |
+| Delete Post | 0 | 0 |
 | Delete Comment | 0 | 0 |
-| Booking | 0 | 0 |
-| Create Booking | 0 | 0 |
-| Edit Booking | 0 | 0 |
-| Delete Booking| 0 | 0 |
-| Gallery | 0 | 0 |
-| Add Photo | 0 | 0 |
-| Delete Photo Modal | 0 | 0 |
-| Visit Us | 0 | 0 |
-| Forgot Password | 0 | 0 |
+| About | 0 | 0 |
+| My_Posts | 0 | 0 |
+|
+
 | Error 403 | 0 | 0 |
 | Error 404 | 0 | 0 |
 | Error 500 | 0  | 0 |
