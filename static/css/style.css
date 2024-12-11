@@ -13,7 +13,7 @@ marquee {
     font-size: 2.0rem;
 }
 
-.red-o {
+.country {
     color: Peru;
 }
 
@@ -48,6 +48,11 @@ marquee {
 .carousel-control-next {
   width: auto;
 }
+
+.display-2 {
+    color: #E6B0B0;
+}
+    
 
 .section {
     margin-bottom: 22em;
@@ -250,4 +255,8 @@ marquee {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+.text-center {
+    color:black;
 }

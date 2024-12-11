@@ -15,9 +15,9 @@
         <img src="{% static 'images/Paddington1.webp' %}" class="d-block c-img w-100" alt="paddington in macchu picchu">
         <div class="carousel-caption top-1 mt-4">
             {% if user.is_authenticated %}
-            <h1 class="display-1 fw-bolder text-capitalized">Get Lost in Peru</h1>
+            <h1 class="display-2 fw-bolder text-capitalized">Get Lost in Peru</h1>
             {% else %}
-            <p class="display-1 fw-bolder text-capitalized">Get Lost in Peru</p>
+            <h1 class="display-2 fw-bolder text-capitalized">Get Lost in Peru</h1>
             <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
             {% endif %}
         </div>
@@ -28,7 +28,7 @@
             {% if user.is_authenticated %}
             <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</h1>
             {% else %}
-            <p class="display-1 fw-bolder text-capitalized">Share your experiences</p>
+            <h1 class="display-1 fw-bolder text-capitalized">Share your experiences</p>
             <a class="btn btn-success px-4 py-2 fs-5 mt-5href=" href="{% url 'account_signup' %}" role="button">Sign-up</a>
             {% endif %}
         </div>
@@ -58,7 +58,6 @@
   <div class="container">
     <div class="row g-0 d-flex align-items-center">
       <div class="col-md-12">
-        <!--h1>Climate</h1-->
         <hr>
         <marquee width="100%" direction="left" height="70px">
           ☀️ Summer: Dec 21 - Mar 19 (rainy season in the Andes and the Amazon)   🍂 Autumn: Mar 20 - Jun 20   ❄️ Winter: Jun 21 - Sep 22   🌸 Spring: Sep 23 - Dec 20
@@ -82,7 +81,7 @@
               <div class="col-md-6">
                 <h2 class="heading display-10 fw-bold">Peru, a country of ancient traditions, delicious gastronomy, and breathtaking landscapes.</h2>
                 <hr>
-                <p class="fs-4">Do you want to know why you should visit Peru?</p>
+                <h3 class="fs-4">Do you want to know why you should visit Peru?</h3>
               </div>
           </div>
       </div>

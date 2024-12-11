@@ -46,14 +46,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'mainpage' %}">
-            <span class="brand">Get Lost<span class="thin"> In</span><span class="red-o"> Peru</span>
+            <span class="brand">Get Lost<span class="thin"> In</span><span class="country"> Peru</span>
             </span>
             </a>
-            <!--img class="img-fluid rounded-lg img-shadow" src="{% static 'images/dogpark_lady.png' %}"
-                    alt="dogpark lady" id="dogpark_lady"-->
-           
-            <!--a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Get<span class="red-Lost">Lost</span>in<span
-                        class="thin">|Peru</span></span></a-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -125,12 +120,12 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">
+        <p class="m-0 text-center">
             {% block copyright %}
                 &copy;2024 - Guissela Chumbe
             {% endblock copyright %}
         </p>
-        <div class="m-0 text-center text-white">Follow me: 
+        <div class="m-0 text-center">Follow me: 
           <a href="https://www.linkedin.com/in/guissela-chumbe-pi%C3%B1as-a05201221/" target="blank" rel="noopener" aria-label="LinkedIn-opens in a new tab" title="LinkedIn">
                 <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn Icon" class="social-icon">
           </a>
