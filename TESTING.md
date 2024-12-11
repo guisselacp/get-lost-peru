@@ -1,0 +1,68 @@
+# Testing
+
+This is the TESTING file for the [GetLostInPeru](https://project-get-lost-in-peru-becd606e7388.herokuapp.com/) website.
+
+Return back to the [README.md](README.md) file.
+
+## Testing Contents  
+  
+- [Testing](#testing)
+  - [Testing Contents](#testing-contents)
+  - [Validation](#validation)
+    - [HTML Validation](#html-validation)
+    - [JavaScript Validation](#javascript-validation)
+    - [Python Validation](#python-validation)
+    - [CSS Validation](#css-validation)
+    - [Lighthouse Scores](#lighthouse-scores)
+    - [Wave Accessibility Evaluation](#wave-accessibility-evaluation)
+  - [Manual Testing](#manual-testing)
+    - [User Input/Form Validation](#user-inputform-validation)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Testing User Stories](#testing-user-stories)
+    - [Dev Tools/Real World Device Testing](#dev-toolsreal-world-device-testing)
+  - [Bugs](#bugs)
+    - [Known Bugs](#known-bugs)
+
+## Validation
+
+### HTML Validation
+
+For my HTML files I have used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+I have had to follow a different approach for validating my HTML for this project as the majority of my pages are developed using Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication. The HTML validator will throw errors if I were to use my website's URL, so I have had to follow the below approach for every page:
+
+- Via the deployed Heroku app link, I have navigated to each individual page.
+- Right clicking on the screen/CTRL+U/⌘+U on Mac, allows a menu to appear, giving me the option to 'View page source'.
+- The complete HTML code for the deployed page will appear, allowing you to select the entire code using CTRL+A/⌘+A on Mac.
+- Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
+- Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
+
+![html validation](documentation/testing/html_valid.png)
+
+All HTML pages were validated and received a 'No errors or warning to show' result, as shown above.
+
+| HTML Source Code/Page | Errors | Warnings |
+| ---- | ------ | -------- | 
+| Home | 0 | 0 |
+| Sign In | 0 | 0 |
+| Sign Up | 0 | 0 |
+| Posts | 0 | 0 |
+| Add Post | 0 | 0 |
+| Post_detail | 0 | 0 |
+| Edit Article | 0 | 0 |
+| Delete Article | 0 | 0 |
+| Delete Comment | 0 | 0 |
+| Booking | 0 | 0 |
+| Create Booking | 0 | 0 |
+| Edit Booking | 0 | 0 |
+| Delete Booking| 0 | 0 |
+| Gallery | 0 | 0 |
+| Add Photo | 0 | 0 |
+| Delete Photo Modal | 0 | 0 |
+| Visit Us | 0 | 0 |
+| Forgot Password | 0 | 0 |
+| Error 403 | 0 | 0 |
+| Error 404 | 0 | 0 |
+| Error 500 | 0  | 0 |
+  
+<hr>  
