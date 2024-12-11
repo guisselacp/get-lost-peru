@@ -40,11 +40,11 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <article class="card-text">
+                <div class="card-text">
                     {{ post.excerpt }}
                     <hr>
                     {{ post.content | safe }}
-                </article>
+                </div>
                 <div class="row">
                   <div class="col-4">
                       <div class="d-flex flex-row flex-md-column">
