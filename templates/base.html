@@ -127,13 +127,16 @@
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">
             {% block copyright %}
-                Made by Guissela Chumbe
+                &copy;2024 - Guissela Chumbe
             {% endblock copyright %}
         </p>
-        <p class="m-0 text-center text-white">Follow me: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <div class="m-0 text-center text-white">Follow me: 
+          <a href="https://www.linkedin.com/in/guissela-chumbe-pi%C3%B1as-a05201221/" target="blank" rel="noopener" aria-label="LinkedIn-opens in a new tab" title="LinkedIn">
+                <img src="{% static 'icons/linkedin.png' %}" alt="LinkedIn Icon" class="social-icon">
+          </a>
+          <a href="https://github.com/guisselacp" target="blank" rel="noopener" aria-label="Github-opens in a new tab" title="GitHub">
+                <img src="{% static 'icons/github.png' %}" alt="Github Icon" class="social-icon">
+          </div>
         </p>
     </footer>
 
