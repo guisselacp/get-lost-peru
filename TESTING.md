@@ -61,3 +61,11 @@ All HTML pages were validated and received a 'No errors or warning to show' resu
 | Error 500 | 0  | 0 |
   
 <hr>  
+
+### JavaScript Validation
+
+I don't have any JavaScript code added to the project.
+
+<hr>
+
+### Python Validation
