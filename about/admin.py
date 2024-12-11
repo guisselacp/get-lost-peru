@@ -3,6 +3,8 @@ from .models import About, DropMeALine
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
+
+
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
@@ -12,6 +14,7 @@ class AboutAdmin(SummernoteModelAdmin):
 #       If you want to customise the admin panel view in your
 #       own projects, then inherit from admin.ModelAdmin like
 #       we do below.
+
 
 @admin.register(DropMeALine)
 class DropMeALineAdmin(admin.ModelAdmin):

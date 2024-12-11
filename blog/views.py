@@ -14,6 +14,7 @@ from django.contrib.auth.mixins import (
 
 # Create your views here.
 
+
 class AddPost(LoginRequiredMixin, CreateView):
     """
     A model to create a post
@@ -35,6 +36,7 @@ class AddPost(LoginRequiredMixin, CreateView):
                 self.request, 'Post submitted and awaiting approval!')
 
         return response
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
@@ -80,14 +82,15 @@ def post_detail(request, slug):
 
     comment_form = CommentForm()
 
-    # context = {"post": post}
-    return render(request, "blog/post_detail.html", 
+    return render(
+        request,
+        "blog/post_detail.html",
         {
-            "post":post,
-            "comments":comments,
-            "comment_count": comment_count,
-            "comment_form": comment_form,
-            'liked': liked,
+           "post": post,
+           "comments": comments,
+           "comment_count": comment_count,
+           "comment_form": comment_form,
+           'liked': liked,
         },
     )
 
@@ -110,7 +113,8 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -127,7 +131,8 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
@@ -138,7 +143,7 @@ class PostLike(View):
     """
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
-       
+
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
@@ -147,9 +152,8 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-
 @login_required
-def edit(request, pk): 
+def edit(request, pk):
     post = get_object_or_404(Post, pk=pk, author=request.user)
 
     if request.method == 'POST':
@@ -165,15 +169,13 @@ def edit(request, pk):
         'form': form,
         'title': 'Edit post',
     })
-     
-   
+
+
 @login_required
 def delete(request, pk):
     post = get_object_or_404(Post, pk=pk, author=request.user)
     if request.method == 'POST':
-       post.delete()
-       messages.success(request, "Post successfully deleted!")
-       return redirect('userprofile')
-    return render( request,'delete.html', {
-        'post':post
-    })
+        post.delete()
+        messages.success(request, "Post successfully deleted!")
+        return redirect('userprofile')
+    return render(request, 'delete.html', {'post': post})

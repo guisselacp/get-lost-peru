@@ -69,3 +69,18 @@ I don't have any JavaScript code added to the project.
 <hr>
 
 ### Python Validation
+
+[CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
+
+| Feature | admin.py | forms.py | models.py | urls.py | views.py |
+|---------|----------|----------|-----------|---------|----------|
+| Blog | [no errors](documentation/testing/blog_admin.png) | [no errors](documentation/testing/blog_forms.png) | [no errors](documentation/testing/blog_models.png) | [no errors](documentation/testing/blog_urls.png) | [no errors](documentation/testing/blog_views.png) |
+| About  | [no errors](documentation/testing/about_admin.png) | [no errors](documentation/testing/about_forms.png) | [no errors](documentation/testing/about_models.png) | [no errors](documentation/testing/about_urls.png) | [no errors](documentation/testing/about_views.png) |
+| GetLostInPeru main app | na | na | na | [no errors](documentation/testing/getlostinperu_urls.png) | na |
+| Mainpage | na | na | na | [no errors](documentation/testing/mainpage_urls.png) | [no errors](documentation/testing/mainpage_views.png) |
+| Userprofile | na | na | na | [no errors](documentation/testing/userprofile_urls.png) | [no errors](documentation/testing/userprofile_views.png) |
+
+<hr>
+
+### CSS Validation 
+

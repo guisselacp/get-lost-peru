@@ -2,6 +2,8 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
+
+
 class About(models.Model):
     """
     Stores a single about me site.
@@ -23,5 +25,3 @@ class DropMeALine(models.Model):
 
     def __str__(self):
         return f"Drop me a line from {self.name}"
-
-   
