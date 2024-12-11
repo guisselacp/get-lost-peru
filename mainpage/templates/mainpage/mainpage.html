@@ -54,4 +54,37 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  {% endblock content %}
+
+
+<!-- New Section-->
+<section class="section py-5" id="section-info">
+  <div class="container">
+      <div class="text-center">
+          <div class="row g-0 d-flex align-items-center">
+              <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class= "embed-responsive-item" src="https://www.youtube.com/embed/BD2y5rTMxqs" allow="autoplay" allowfullscreen>
+                  </iframe>
+                </div>  
+              </div> 
+              <div class="col-md-6">
+                <h2 class="heading display-10 fw-bold">Peru, a country of ancient traditions, delicious gastronomy, and breathtaking landscapes</h2>
+                <hr>
+                <p class="fs-4">Do you want to know why you should visit Peru?</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="container">
+  <div class="text-center">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-12">
+        <h1>Climate</h1>
+        <img src="{% static 'images/climate.png' %}" class="d-block c-img w-100" alt="climate">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

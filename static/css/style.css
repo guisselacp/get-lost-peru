@@ -40,6 +40,18 @@ body {
     filter:brightness(0.9);
 }   
 
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+}
+
+.section {
+    margin-bottom: 10em;
+  }
+
+#section-info {
+    background-color: whitesmoke;
+  }
 
 .card {
     border: none;
