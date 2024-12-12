@@ -430,16 +430,14 @@ There are two types of like icons used, which differentiate whether the user lik
 
 And this example shows when the user changes his mind and decides to remove the like.
 
-**403, 404, 500 Pages**
+**Create, Edit and Delete a Comment**
 
-These templates were added to this project in order to give the user the functionality to return to the website by using the links in the navigation bar or the Back to Homepage button on the Error page.
+<details open>
+    <summary>CRUD Comment - Registered User</summary>  
+    <img src="documentation/final_views/CRUD_comment.png">  
+</details>
 
-![404 error page](documentation/final_views/404error.png)
-
-- They are triggered when a user tries to access:
-  - information that is not theirs - 403,
-  - information that does not exist anymore - 404,
-  - something has gone wrong with the server and cannot retrieve database - 500
+Here we can see that the user added a comment and is waiting for approval, and also has the option to edit and delete the comment.
 
 **Admin Panel**
 
@@ -450,6 +448,8 @@ Users posts and comments require approval by the Admin of GetLostInPeru to keep 
 
 ## Future Features
 
+- Initially, I considered including the video attribute in my model, but I was advised to leave it as a future option so I would like to implement that.
+- I tried using a marquee tag, but when my webpage passed the accessibility evaluation, it was observed, and WAVE indicated an error. So I had to remove it. Amy investigated, and the marquee seems obsolete and has problems. This motivated me to explore something similar in HTML.
 
 
 # Technologies & Languages Used
@@ -480,7 +480,6 @@ Users posts and comments require approval by the Admin of GetLostInPeru to keep 
 - Python Slugify v8.0.1
 - WhiteNoise 5.3.0
   
-
 Further information is available in the [requirements.txt file](requirements.txt)
 
 ## Tools & Programs
@@ -612,31 +611,6 @@ To start the deployment process , please follow the below steps:
 9.  Choose from '**Automatic**' or '**Manual**' deployment options, I chose the 'Manual' deployment method. Click '**Deploy Branch**'.
 10. Once the waiting period for the app to build has finished, click the '**View**' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. **DISABLE_COLLECTSTATIC**  may be removed from the Config Vars once you have saved and pushed an image within your project, as can **PORT:8000**.
 
-## Clone project
-
-A local clone of this repository can be made on GitHub. Please follow the below steps:
-
-1. Navigate to GitHub and log in.
-2. The [GetLostPeru Repository](https://github.com/guisselacp/get-lost-peru) can be found at this location.
-3. Above the repository file section, locate the '**Code**' button.
-4. Click on this button and choose your clone method from HTTPS, SSH or GitHub CLI, copy the URL to your clipboard by clicking the '**Copy**' button.
-5. Open your Git Bash Terminal.
-6. Change the current working directory to the location you want the cloned directory to be made.
-7. Type `git clone` and paste in the copied URL from step 4.
-8. Press '**Enter**' for the local clone to be created.
-9. Using the ``pip3 install -r requirements.txt`` command, the dependencies and libraries needed for FreeFido will be installed.
-10. Set up your **env.py** file and from the above steps for Cloudinary and ElephantSQL, gather the Cloudinary API key and the Elephant SQL url for additon to your code.
-11. Ensure that your **env.py** file is placed in your **.gitignore** file and follow the remaining steps in the above Django Project Setup section before pushing your code to GitHub.
-
-## Fork Project
-
-A copy of the original repository can be made through GitHub. Please follow the below steps to fork this repository:  
-
-1. Navigate to GitHub and log in.  
-2. Once logged in, navigate to this repository using this link [GetLostPeru Repository](https://github.com/guisselacp/get-lost-peru).
-3. Above the repository file section and to the top, right of the page is the '**Fork**' button, click on this to make a fork of this repository.
-4. You should now have access to a forked copy of this repository in your Github account.
-5. Follow the above Django Project Steps if you wish to work on the project.
 
 # Credits
 
@@ -649,11 +623,9 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - [Code Institute's](https://github.com/Code-Institute-Org>) Blog/Boutique Ado walkthroughs
 - [FreeFido](https://freefido.herokuapp.com/)  
 - [Aperture Adventures](https://lens-whisperer-1fde92b99730.herokuapp.com//)  
-- [Daisy McGirr's](https://www.youtube.com/@IonaFrisbee) easy to follow Django Recipe App tutorial for understanding how to use Django's MVT framework
 - [Django UserCreationForm](https://www.javatpoint.com/django-usercreationform>) Creating New Users 
 difference-between-dom-parentnode-and-parentelement-in-javascript/) of delete confirm button
 - [Django Docs](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.readonly_fields) to make model item readonly for search function showing deleted articles
-- [Django cleaned data how to](https://overiq.com/django-1-10/django-form-basics/?utm_content=cmp-true)
 
 ## Media
 
@@ -667,9 +639,11 @@ The following sites were used to gather the photographic media used in GetLostIn
 
 ## Acknowledgements
 
+I am grateful to my husband, who encouraged me to apply for this course. It was a challenge, but I enjoyed every moment.
+Thanks to Amy Richardson for guiding me when I was confused.
+
 Code Institute 
 
-- [Amy Richardson](https://github.com/amylour) - Learning Facilitator
 - [John Rearden](https://github.com/johnrearden) - Coding Coach
 - [Mark Briscoe](https://github.com/mbriscoe) - Coding Coach
 
