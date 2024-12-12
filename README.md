@@ -301,9 +301,9 @@ GetLostInPeru was created with the idea of ​​encouraging visits to Peru, so 
 | Feature   | Unregistered User | Registered, Logged-In User |
 |-----------|-------------------|-----------------|
 | Home Page | Visible           | Visible         |
-| Blog |Visible but not interactable via 'Likes/Comments', 'Add Post' button not visible   | Visable   |
-| About     | Visable | Visable |
-| My_Posts   | Not Visable | Visable |
+| Blog |Visible but not interactable via 'Likes/Comments', 'Add Post' button not visible   | Visible   |
+| About     | Visible | Visible |
+| My_Posts   | Not Visible | Visible |
 
 
 ## CRUD Functionality
