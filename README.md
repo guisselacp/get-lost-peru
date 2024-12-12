@@ -379,34 +379,56 @@ A message is displayed to confirm the user's decision.
 **Blog**
 
 <details open>
-    <summary>Logout</summary>  
+    <summary>Blog - Unregistered User</summary>  
     <img src="documentation/final_views/blog.png">  
 </details>
 
+An unregistered user has access to all published posts, and can also see comments and likes. However, they cannot add posts, comments or likes.
 
 **Create Post**
 
 <details open>
-    <summary>Logout</summary>  
-    <img src="documentation/final_views/blog.png">  
+    <summary>Blog - Registered User</summary>  
+    <img src="documentation/final_views/blog_r.png">  
 </details>
 
+A registered user has a different view; on the right side of the "Posts" title, they can see an icon that gives them access to add posts (upon approval by the administrator).
 
+**My_Posts**
 
-**Edit Post**
+<details open>
+    <summary>My_Posts - Registered User</summary>  
+    <img src="documentation/final_views/my_posts.png">  
+</details>
 
+Only registered users have access to this option "My_Posts". They can see only their posts and decide whether to edit or delete them.
 
+**Edit and Delete Post**
+
+<details open>
+    <summary>Edit/Delete Posts - Registered User</summary>  
+    <img src="documentation/final_views/edit_delete_post.png">  
+</details>
   
+  Only registered users can see "Edit" and "Delete" buttons. I must point out that these work correctly, fulfilling the CRUD functionality.
 
+**Like a Post**
 
-**Delete Post**
+<details open>
+    <summary>Add a Like Post - Registered User</summary>  
+    <img src="documentation/final_views/like_add.png">  
+</details>
 
+There are two types of like icons used, which differentiate whether the user liked a post or not. The user can also decide to remove the like. Here we can see the first option, when the user likes a post.
 
+**Unlike a Post**
 
+<details open>
+    <summary>Remove my Like Post - Registered User</summary>  
+    <img src="documentation/final_views/like_remove.png">  
+</details>
 
-
-
-
+And this example shows when the user changes his mind and decides to remove the like.
 
 **403, 404, 500 Pages**
 
