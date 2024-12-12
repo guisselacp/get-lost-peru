@@ -96,9 +96,12 @@ Lighthouse testing was carried out in Incognito mode to achieve the best result.
 **Desktop and Mobile**  
 
 ![Lighthouse scores desktop](documentation/testing/desktop_lh.png)  
+
 *Desktop Home Page*  
 
+
 ![Lighthouse scores mobile](documentation/testing/mobile_lh.png) 
+
 *Mobile Home Page*    
 
 <hr>  

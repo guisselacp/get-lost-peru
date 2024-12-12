@@ -29,12 +29,8 @@ For Admin access with relevant sign-in information: [GetLostInPeru Admin](https:
     - [MoSCoW Prioritization](#moscow-prioritization)
     - [Sprints](#sprints)
   - [User Stories](#user-stories)
-    - [Visitor User Stories](#visitor-user-stories)
-    - [Epic - User Profile](#epic---user-profile)
-    - [Epic - Articles](#epic---articles)
-    - [Epic - Booking](#epic---booking)
-    - [Epic - Photo Gallery](#epic---photo-gallery)
-    - [Epic - Visit Us/Reviews](#epic---visit-usreviews)
+    - [Site User Stories](#site-user-stories)
+    - [Epic - Blog](#epic---blog)
   - [Scope Plane](#scope-plane)
     - [Security](#security)
   - [Structural Plane](#structural-plane)
@@ -103,13 +99,13 @@ I'm using [Google Fonts](https://fonts.google.com/), I selected 'Roboto' and 'La
 
 ![example Roboto font](documentation/final_views/roboto_font.png) 
 ![example Lato font](documentation/final_views/lato_font.png) 
+
 # Project Planning  
  
 ## Strategy Plane
 
 The project goal was to build an uncomplicated blog app to promote visits to Peru and at the same time provide information regarding places that could be visited.
 Along the way, I thought it would be more interactive if users could add posts with essential content, which the site administrator should validate. 
-
 
 ### Site Goals
 
@@ -131,18 +127,17 @@ I used the MoSCoW Prioritization method for GetLostInPeru, with this three label
 - **Should Have**: the components that are valuable to the project but not is indispensable at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
 - **Could Have**: features that could be implemented but are not urgent.
 
-
 ### Sprints
 
-Although the project's duration was reasonable, it was a challenge to achieve it since, although I was clear about what I wanted to do, it was challenging to implement it.
-
+Although the project duration was reasonable, it was a challenge to achieve it because, although I was clear about what I wanted to do, it was the first time I was programming with Django and Python.
+I focused on achieving the functionality of the project, and then I dedicated time to the style and colors, which is also important.
 
 ## User Stories
 
-User stories and features on [GitHub Projects](<https://github.com/users/amylour/projects/4>)
+User stories and features on [GitHub Projects](<https://github.com/users/guisselacp/projects/4>)
 
 
-### Visitor User Stories
+### Site User Stories
 
 | User Story | Priority |
 |----------------------------------------------------------------------------------------------------------------------------|---------------|
@@ -180,15 +175,6 @@ Essential features of my project were:
 - User authentication.
 - Full CRUD functionality for posts and comments.
 
-### Security
-
-I used the following implementations:
-
-- AllAuth
-- CSFR Token
-  CSRF (Cross-Site Request Forgery) tokens have been included in the project to prevent vulnerabilities to malicious attacks and ensure that only forms from trusted domains can be used to POST data back into the database.
-
-![CSRF](documentation/final_views/CSRF.png) 
 
 ## Structural Plane
 
@@ -208,10 +194,18 @@ Standardise the size of images when displaying the post list. This makes it look
 The wireframes for GetLostInPeru were created in Figma [Figma](www.figma.com).
 Although it was the first time I used Figma, it was not so laborious and a good result was achieved.
 
-**Mobile/Tablet view for:**  
+**Desktop/Mobile view for:**  
 
 - Home
+- Blog
 - About
+
+From the beginning, I thought about using images on the homepage to motivate the user to enter. Using the carousel with Bootstrap seemed like a good idea, and I applied it.
+
+<details open>
+    <summary>Mobile/Tablet Home Page Wireframe</summary>  
+    <img src="documentation/wireframes/home.png">  
+</details>
 
 
 
@@ -227,70 +221,76 @@ Although it was the first time I used Figma, it was not so laborious and a good 
 
 
 ### Database Schema - Entity Relationship Diagram
-
-![ERD Image](documentation/wireframes/freefidov2.png)  
+ <img src="documentation/wireframes/GLIP_ERD.png">  
+![ERD Diagram](documentation/wireframes/GLIP_ERD.png)  
 *Database Schema (ERD) for GetLostInPeru displaying relationships between feature components saved within the database*
 
-This Entity Relationship Diagram(ERD) demonstrates how each feature interacts with each other and the connected PostgreSQL Database. Using Django's User Model, and Django AllAuth to carry out all user authentication, a user_id is created when the user registers with their username and email. This allows the user to edit a blank profile, create new articles, add comments and photos which will display their username, and create and manage their bookings. 
+This Entity Relationship Diagram(ERD) demonstrates how each feature interacts with each other and the connected PostgreSQL Database. I used [Lucid Chart](www.lucidchart.com/) to create my ERD.
 
-The Posts and Comments Models were inspired by the blog walkthrough by the Code Institute during my learning of Django. They helped me to get a good and secure grasp of the templating structure and connected Python files to push my features further, make them my own.
+The Post and Comments Models of the blog walkthrough by the Code Institute were the basis for developing the project. Although there were doubts about wanting to implement new functionalities, these were overcome thanks to the dedication to completing the project and the relevant guidance of the tutors in difficult moments.
 
-Through the Admin Django Dashboard, the connected user_id to all data entered to the site means that the Admin can remove a User and their data completely through the additon of on_delete=models.CASCADE. At the moment, a user can remove any data they share with the site, but they cannot delete their account completely. This feature will come in the next version.
 
 ### Security
 
-A number of security steps were taken in this project in order to protect the user's submitted data. Unlike a strictly informative website, FreeFido allows the user to become part of the community and avail of it's booking services. To meet the strict internet standards of protecting a user's data, the following processes were included in the project's development.
+I used the following implementations:
+
+- AllAuth
+- CSFR Token
+
 
 **AllAuth**  
 
-Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on FreeFido. The setup of AllAuth included:
+Supports multiple authentication schemes (e.g. login by user name, or by email), as well as multiple strategies for account verification (ranging from none to mandatory email verification).
+
+Django AllAuth is an installable framework that takes care of the user registration and authentication process. Authentication was needed to determine when a user was registered or unregistered and it controlled what content was accessible on my webpage.
+
+. The setup of AllAuth included:
 
 - installing it to my workspace dependencies
 - adding it to my INSTALLED_APPS in my settings.py
 - sourcing the AUTHENTICATION_BACKENDS from the AllAuth docs for my settings.py
 - adding its URL to my projects 'urls.py'
 - run database migrations to create the tables needed for AllAuth
-- (For this version of FreeFido, to meet MVP, email and social accounts were not configured as part of the feedback/sign up options to the user. They will be included with the next release.)
+
   
 **Defensive Design**  
 
-GetLostInPeru was developed to ensure a smooth user experience, to the best of my current learning experience with Django. 
+GetLostInPeru was developed to ensure user-friendly content that motivates users to interact, so the following points were considered:
 
-- Input validation and error messages provide feedback to the user to guide them towards the desired outcome. 
-- Unregistered users are diverted to the Sign Up page from restricted access pages. 
-- Authentication processes control edit/delete icons to reveal them to the content author only. 
-- Deletion of data is confirmed through an additional modal, double-checking with the user.
-- Error pages are displayed with 'Take me home' buttons to help users get back on track. 
+- Any user can see posts, comments, and likes.
+- The authentication process is a filter in which only registered users can add posts (with prior approval from the administrator)
+- Authentication processes control the edit/delete buttons to reveal them only to the author of the content.
+- To delete a post, the registered user has a double checking to confirm the decision.
 - Testing and validation of features completes the process.
 
 **CSRF Tokens** 
 
 CSRF (Cross-Site Request Forgery) tokens are included in every form to help authenticate the request with the server when the form is submitted. Absence of these tokens can leave a site vulnerable to attackers who may steal a users data.
-  
+
+CSRF tokens have been included in the project to prevent vulnerabilities to malicious attacks and ensure that only forms from trusted domains can be used to POST data back into the database.
+
+![CSRF](documentation/final_views/CSRF.png) 
 
 # Features
 
 ## User View - Registered/Unregistered
 
-It was important to me from the beginning that GetLostInPeru be accessible to an unregistered user. I wanted the website to accessible to a new user quickly by immediately inviting them into the community through the blog's information, posts and gallery sections. The following is a breakdown of the site's accessibility for registered/unregistered users:
+GetLostInPeru was created with the idea of ​​encouraging visits to Peru, so it was considered that any user could access information on the website. However, a registered user has functionalities to interact more dynamically; here are some differences:
 
 | Feature   | Unregistered User | Registered, Logged-In User |
 |-----------|-------------------|-----------------|
-| Home Page | Visable           | Visable         |
-| Profile   | Not Visible - 'Profile' icon only appears for registered, logged-in users | Visable and full feature interaction available |
-| Blog      | Visable but not interactable via 'Likes/Comments', 'Add Post' button not visible | Visable and full feature interaction available |
-|
-| 
-| 
+| Home Page | Visible           | Visible         |
+| Blog |Visible but not interactable via 'Likes/Comments', 'Add Post' button not visible   | Visable   |
+| About     | Visable | Visable |
 
 
 ## CRUD Functionality
 
-Users are able to Create, Read, Update and Delete their shared information on FreeFido. Some features make full CRUD functionality available, whilst others present the necessary options only. Here is my CRUD breakdown for FreeFido:
+Users are able to Create, Read, Update and Delete their shared information on GetLostInPeru. Some features make full CRUD functionality available, whilst others present the necessary options only. Here is my CRUD breakdown for the project:
 
 | Feature | Create | Read | Update | Delete |
 |---------|--------|------|--------|--------|
-| Profile | Created upon registration | Yes | Yes | Full Profile deletion is currently only available to Admin upon User Account deletion, the profile dashboard clears automatically if a user removes all of their articles or bookings |
+| Likes | Yes | Yes | Yes | Yes |
 | Posts | Yes | Yes | Yes | Yes |
 
 
