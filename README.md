@@ -222,29 +222,29 @@ In the Home page section, when the user is not registered, they will see 'Regist
 </details>
 
 <details open>
-    <summary>Desktop Wireframe Carousel image3- Visible to Unregistered Users</summary>  
+    <summary>Desktop Wireframe Carousel image3</summary>  
     <img src="documentation/wireframes/carousel_3.png">  
 </details>
 
-I decided to use a carousel on the home page because it is an interesting way to attract the web user's attention. Also, the first slide of the carousel includes a Sign-up button to invite the user to register.
+I decided to use a carousel on the home page because it is an interesting way to attract the web user's attention. Also, if the user is not registered yet, the first slide of the carousel includes a Sign-up button to persuade the user to register.
 
 - About
 
 <details open>
-    <summary>Desktop Wireframe About- Visible to Unregistered Users</summary>  
+    <summary>Desktop Wireframe About</summary>  
     <img src="documentation/wireframes/about.png">  
 </details>
 
 This page presents the purpose of this page and introduces the creator of it. It also includes a form where the user can contact the site owner.
 
-- Sign Up
+- Register
 
 <details open>
-    <summary>Desktop Wireframe Register/Sign-up- Visible to Unregistered Users</summary>  
+    <summary>Desktop Wireframe Register/Sign-up</summary>  
     <img src="documentation/wireframes/register.png">  
 </details>
 
-This page allows the user to register and thus interact more dynamically.
+The option "Register" invites the user to sign-up for the website and interact more dynamically.
 
 ### Database Schema - Entity Relationship Diagram
  
@@ -278,7 +278,7 @@ Django AllAuth is an installable framework that takes care of the user registrat
   
 **Defensive Design**  
 
-GetLostInPeru was developed to ensure user-friendly content that motivates users to interact, so the following points were considered:
+GetLostInPeru was developed to ensure user-helpful content that motivates users to interact, so the following points were considered:
 
 - Any user can see posts, comments, and likes.
 - The authentication process is a filter in which only registered users can add posts (with prior approval from the administrator)
@@ -321,66 +321,75 @@ Users are able to Create, Read, Update and Delete their shared information on Ge
   
 **Header/Navigation & Footer**
 
-The option "Register" invites the user to sign-up for the website.
-
 <details open>
     <summary>Header & Navigation - Unregistered users (Navbar Option - Register)</summary>  
     <img src="documentation/final_views/nav.png">  
 </details>
-
-
-The option "My_Posts" allows registered users to see their created posts that the administrator accepted.
 
 <details open>
     <summary>Header & Navigation - Registered users (Navbar Option - My_Posts)</summary>  
     <img src="documentation/final_views/nav_r.png">  
 </details>
 
-In the footer, the developer's name, LinkedIn and GitHub accounts are considered.
+The option "My_Posts" allows registered users to see their created posts that the administrator accepted to be published.
 
 <details open>
     <summary>Footer - Visible to all Users</summary>  
     <img src="documentation/final_views/footer.png">  
 </details>
 
+In the footer, the developer's name, LinkedIn and GitHub accounts are considered.
+
+
 **Home Page**
+
+<details open>
+    <summary>Home Page - Visible to Unregistered Users</summary>  
+    <img src="documentation/final_views/home.png">  
+</details>
+
 <details open>
     <summary>Home Page - Visible to Registered Users</summary>  
     <img src="documentation/final_views/home_r.png">  
 </details>
+
 When the registered user logs in, the options on the right-hand navigation bar will change, and they can see  'My_Posts' and 'Logout' options.
 Also, a user icon will appear on the right-hand side, followed by the user's username.
 
+**Login**
 
+<details open>
+    <summary>Sign In </summary>  
+    <img src="documentation/final_views/sign_in.png">  
+</details>
 
-**About Page**
-
-
+If you are already a registered user you can access the website.
 <hr>
-
-**Register/SignUp**
-
-
-**Sign In**
-
-
 
 **Logout**
 
+<details open>
+    <summary>Logout</summary>  
+    <img src="documentation/final_views/logout.png">  
+</details>
 
+A message is displayed to confirm the user's decision.
 <hr>
-
-
-
 
 **Blog**
 
-
+<details open>
+    <summary>Logout</summary>  
+    <img src="documentation/final_views/blog.png">  
+</details>
 
 
 **Create Post**
 
-
+<details open>
+    <summary>Logout</summary>  
+    <img src="documentation/final_views/blog.png">  
+</details>
 
 
 
