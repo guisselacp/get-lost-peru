@@ -203,16 +203,17 @@ Although it was the first time I used Figma, it was not so laborious and a good 
 From the beginning, I thought about using images on the homepage to motivate the user to enter. Using the carousel with Bootstrap seemed like a good idea, and I applied it.
 
 <details open>
-    <summary>Mobile/Tablet Home Page Wireframe</summary>  
+    <summary>Mobile/Tablet Home Page Wireframe - Visible to Unregistered Users</summary>  
     <img src="documentation/wireframes/home.png">  
 </details>
 
-
+In the Home page section, when the user is not registered, they will see 'Register' in the navbar,  which will bring them to the Sign Up page.
 
 
 **Desktop view for:**
 
-- Home
+- Home Carrosusel
+- About
 - Sign Up
 
 
@@ -221,14 +222,13 @@ From the beginning, I thought about using images on the homepage to motivate the
 
 
 ### Database Schema - Entity Relationship Diagram
- <img src="documentation/wireframes/GLIP_ERD.png">  
+ 
 ![ERD Diagram](documentation/wireframes/GLIP_ERD.png)  
 *Database Schema (ERD) for GetLostInPeru displaying relationships between feature components saved within the database*
 
 This Entity Relationship Diagram(ERD) demonstrates how each feature interacts with each other and the connected PostgreSQL Database. I used [Lucid Chart](www.lucidchart.com/) to create my ERD.
 
 The Post and Comments Models of the blog walkthrough by the Code Institute were the basis for developing the project. Although there were doubts about wanting to implement new functionalities, these were overcome thanks to the dedication to completing the project and the relevant guidance of the tutors in difficult moments.
-
 
 ### Security
 
@@ -251,7 +251,6 @@ Django AllAuth is an installable framework that takes care of the user registrat
 - sourcing the AUTHENTICATION_BACKENDS from the AllAuth docs for my settings.py
 - adding its URL to my projects 'urls.py'
 - run database migrations to create the tables needed for AllAuth
-
   
 **Defensive Design**  
 
@@ -298,11 +297,35 @@ Users are able to Create, Read, Update and Delete their shared information on Ge
   
 **Header/Navigation & Footer**
 
+The option "Register" invites the user to sign-up for the website.
 
-  
+<details open>
+    <summary>Header & Navigation - Unregistered users (Navbar Option - Register)</summary>  
+    <img src="documentation/final_views/nav.png">  
+</details>
+
+
+The option "My_Posts" allows registered users to see their created posts that the administrator accepted.
+
+<details open>
+    <summary>Header & Navigation - Registered users (Navbar Option - My_Posts)</summary>  
+    <img src="documentation/final_views/nav_r.png">  
+</details>
+
+In the footer, the developer's name, LinkedIn and GitHub accounts are considered.
+
+<details open>
+    <summary>Footer - Visible to all Users</summary>  
+    <img src="documentation/final_views/footer.png">  
+</details>
 
 **Home Page**
-
+<details open>
+    <summary>Home Page - Visible to Registered Users</summary>  
+    <img src="documentation/final_views/home_r.png">  
+</details>
+When the registered user logs in, the options on the right-hand navigation bar will change, and they can see  'My_Posts' and 'Logout' options.
+Also, a user icon will appear on the right-hand side, followed by the user's username.
 
 
 
@@ -311,26 +334,22 @@ Users are able to Create, Read, Update and Delete their shared information on Ge
 
 <hr>
 
-**Registration/SignUp**
+**Register/SignUp**
 
 
 **Sign In**
 
 
 
-**Sign Out**
+**Logout**
 
 
 <hr>
 
-**Profile**
-
-  
-  
-**Profile Edit**
 
 
-**Articles**
+
+**Blog**
 
 
 
@@ -352,12 +371,7 @@ Users are able to Create, Read, Update and Delete their shared information on Ge
 
 
 
-**Gallery**
 
-
-
-
-**Visit Us**
 
 
 
@@ -374,18 +388,10 @@ These templates were added to this project in order to give the user the functio
 
 **Admin Panel**
 
-Through Django's built-in Administration Panel, the Admin has full access over the data submitted to the website by registered Users. To access the Admin panel the Admin user adds '/admin/' to the end of the URL to display [https://freefido.herokuapp.com/admin/](https://project-get-lost-in-peru-becd606e7388.herokuapp.com/admin)). A username and password is requested. For GetLostInPeru, Admin approval is needed for posts and comments to keep the site on topic and to prevent spamming. 
+Through Django's built-in Administration Panel, the Admin has full access over the data submitted to the website by registered Users. To access the Admin panel the Admin user adds '/admin/' to the end of the URL to display [https://project-get-lost-in-peru-becd606e7388.herokuapp.com/admin/](https://project-get-lost-in-peru-becd606e7388.herokuapp.com/admin). A username and password is requested. For GetLostInPeru, Admin approval is needed for posts and comments to keep the site on topic and to prevent inadequate information.
 
+Users posts and comments require approval by the Admin of GetLostInPeru to keep the website content on topic. Admin can change the status of posts from 'Draft' to 'Published'.
 
-
-Users articles and comments require approval by the Admin of GetLostInPeru to keep the website content on topic. Admin can change the status of posts from 'Draft' to 'Published'.
-
-
-  
-<details>
-    <summary>Dropdown menu allowing Admin to 'approve' a users comment, 'Go' must be clicked to confirm</summary>  
-    </details>
-    
 
 ## Future Features
 
@@ -399,42 +405,35 @@ Users articles and comments require approval by the Admin of GetLostInPeru to ke
 - Python
 - [Git](https://git-scm.com/) used for version control.
 - [Github](https://www.github.com) used for online storage of codebase and Projects tool.
-- [CodeAnywhere](https://app.codeanywhere.com) as an online, cloud-based IDE for development.
-- [Figma](https://www.figma.com) for project design planning and wireframe creation.
+-- [Figma](https://www.figma.com) for project design planning and wireframe creation.
 - [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
 - [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
 - [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
 - [ElephantSQL](https://www.elephantsql.com/) was used to host the PostgreSQL database needed to collect and recall the users data.
 - [Heroku](https://www.heroku.com) was used to host the FreeFido application.
 - [WAVE](https://wave.webaim.org/) to evaluate the accessibility of the site.
-- [Procreate](https://procreate.com/) for image creation and editing.
+
 
 ## Libraries & Frameworks
 
 - Bootstrap v5.2.3
-- Django v3.2.19
-- Django AllAuth v0.54.0
-- Django Crispy Forms v2.0
+- Django v4.2.16
+- Django AllAuth v0.57.2
+- Django Crispy Forms v2.3
 - Crispy Bootstrap5 v0.7
-- Django Resized v1.0.2
-- Django RichTextField v1.6.1
-- Django Summernote v0.8.2
+- Django Summernote v0.8.20.0
 - Python Slugify v8.0.1
-- Pillow v9.5
+- WhiteNoise 5.3.0
   
+
 Further information is available in the [requirements.txt file](requirements.txt)
 
 ## Tools & Programs
 
-- [EZGif](<https://ezgif.com/>) for gif conversion.
 - [Convertio](https://convertio.co/) for file conversion to PNG, WEBP.
-- [Tiny Png](https://tinypng.com/) for file size reduction.
 - [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
 - [Trello](https://www.trello.com) for intial project agile planning.
-- [Perplexity AI](https://www.perplexity.ai/) for breaking down Python concepts and Django documentation into more understandable chunks.
-- [Pattern Monster](https://pattern.monster/) for the hero image pattern SVG.
 - [Favicon](https://favicon.io/) for converting an icon into favicon.
-- [LogoAI](https://www.logoai.com/) for design inspiration using my font and colour choices.
 
 # Testing
 
@@ -461,9 +460,9 @@ To begin this project from scratch, you must first create a new GitHub repositor
 - ```pip3 install dj3-cloudinary-storage```  
   
 2. Once you have installed any relevant dependencies or libraries, such as the ones listed above, it is important to create a **requirements.txt** file and add all installed libraries to it with the ```pip3 freeze --local > requirements.txt``` command in the terminal.  
-3. Create a new Django project in the terminal ```django-admin startproject freefido .```
-4. Create a new app eg. ```python3 mangage.py startapp booking```
-5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'booking',
+3. Create a new Django project in the terminal ```django-admin startproject getlostinperu .```
+4. Create a new app eg. ```python3 mangage.py startapp blog```
+5. Add this to list of **INSTALLED_APPS** in **settings.py** - 'blog',
 6. Create a superuser for the project to allow Admin access and enter credentials: ```python3 manage.py createsuperuser```
 7. Migrate the changes with commands: ```python3 manage.py migrate```
 8. An **env.py** file must be created to store all protected data such as the **DATABASE_URL** and **SECRET_KEY**. These may be called upon in your project's **settings.py** file along with your Database configurations. The **env.py** file must be added to your **gitignore** file so that your important, protected information is not pushed to public viewing on GitHub. For adding to **env.py**:
@@ -563,7 +562,7 @@ To start the deployment process , please follow the below steps:
 A local clone of this repository can be made on GitHub. Please follow the below steps:
 
 1. Navigate to GitHub and log in.
-2. The [FreeFido Repository](https://github.com/amylour/FreeFido_v2) can be found at this location.
+2. The [GetLostPeru Repository](https://github.com/guisselacp/get-lost-peru) can be found at this location.
 3. Above the repository file section, locate the '**Code**' button.
 4. Click on this button and choose your clone method from HTTPS, SSH or GitHub CLI, copy the URL to your clipboard by clicking the '**Copy**' button.
 5. Open your Git Bash Terminal.
@@ -579,7 +578,7 @@ A local clone of this repository can be made on GitHub. Please follow the below 
 A copy of the original repository can be made through GitHub. Please follow the below steps to fork this repository:  
 
 1. Navigate to GitHub and log in.  
-2. Once logged in, navigate to this repository using this link [FreeFido Repository](https://github.com/).
+2. Once logged in, navigate to this repository using this link [GetLostPeru Repository](https://github.com/guisselacp/get-lost-peru).
 3. Above the repository file section and to the top, right of the page is the '**Fork**' button, click on this to make a fork of this repository.
 4. You should now have access to a forked copy of this repository in your Github account.
 5. Follow the above Django Project Steps if you wish to work on the project.
