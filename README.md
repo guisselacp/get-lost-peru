@@ -1,5 +1,5 @@
-# Get Lost In Peru
-
+# GetLostInPeru
+![getlostinperu responsive screenshot](documentation/final_views/Get_Lost_In_Peru_responsive.png)
 ## Introduction
 
 Get Lost in Peru is a blog webpage where a site user can view information about the most essential tips and recommendations if you are planning to visit Peru. The webpage aims to share experiences through posts. Registered users will also be able to interact with the website by adding comments to posts. And if they are interested in a post, they can add a like to it.
@@ -70,7 +70,6 @@ GetLostInPeru is a blog webpage that encourages visits to Peru. Users are invite
 - Discover more about Peru country.
 - Get relevant information about tourist places.
   
-
 Get Lost in Peru is accessible via all browsers and is fully responsive to different screen sizes. It aims to share experiences and recommendations in Peru. 
 As a user, you can access all published posts, with their comments and the number of likes each post has.
 As a registered user, you can share your experiences, questions, doubts, and tips. Also, if you think a post is captivating you will be able to like it.
@@ -197,13 +196,11 @@ Although it was the first time I used Figma, it was not so laborious and a good 
 **Desktop/Mobile view for:**  
 
 - Home
-- Blog
-- About
 
 From the beginning, I thought about using images on the homepage to motivate the user to enter. Using the carousel with Bootstrap seemed like a good idea, and I applied it.
 
 <details open>
-    <summary>Mobile/Tablet Home Page Wireframe - Visible to Unregistered Users</summary>  
+    <summary>Desktop/Mobile Home Page Wireframe - Visible to Unregistered Users</summary>  
     <img src="documentation/wireframes/home.png">  
 </details>
 
@@ -212,14 +209,42 @@ In the Home page section, when the user is not registered, they will see 'Regist
 
 **Desktop view for:**
 
-- Home Carrosusel
+- Home Carousel
+
+<details open>
+    <summary>Desktop Wireframe Carousel image1- Visible to Unregistered Users</summary>  
+    <img src="documentation/wireframes/carousel_1.png">  
+</details>
+
+<details open>
+    <summary>Desktop Wireframe Carousel image2- Visible to Unregistered Users</summary>  
+    <img src="documentation/wireframes/carousel_2.png">  
+</details>
+
+<details open>
+    <summary>Desktop Wireframe Carousel image3- Visible to Unregistered Users</summary>  
+    <img src="documentation/wireframes/carousel_3.png">  
+</details>
+
+I decided to use a carousel on the home page because it is an interesting way to attract the web user's attention. Also, the first slide of the carousel includes a Sign-up button to invite the user to register.
+
 - About
+
+<details open>
+    <summary>Desktop Wireframe About- Visible to Unregistered Users</summary>  
+    <img src="documentation/wireframes/about.png">  
+</details>
+
+This page presents the purpose of this page and introduces the creator of it. It also includes a form where the user can contact the site owner.
+
 - Sign Up
 
+<details open>
+    <summary>Desktop Wireframe Register/Sign-up- Visible to Unregistered Users</summary>  
+    <img src="documentation/wireframes/register.png">  
+</details>
 
-
-
-
+This page allows the user to register and thus interact more dynamically.
 
 ### Database Schema - Entity Relationship Diagram
  
@@ -236,7 +261,6 @@ I used the following implementations:
 
 - AllAuth
 - CSFR Token
-
 
 **AllAuth**  
 
@@ -592,17 +616,11 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 - [Django Docs](https://www.djangoproject.com/)
 - [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Code Institute's](https://github.com/Code-Institute-Org>) Blog/Boutique Ado walkthroughs
+- [FreeFido](https://freefido.herokuapp.com/)  
+- [Aperture Adventures](https://lens-whisperer-1fde92b99730.herokuapp.com//)  
 - [Daisy McGirr's](https://www.youtube.com/@IonaFrisbee) easy to follow Django Recipe App tutorial for understanding how to use Django's MVT framework
-- [Adel Codes - Youtube - Service Appointment Sys using Django](https://www.youtube.com/watch?v=HTHqEr3R_Kw&t=81s)
-- [Django save method](https://docs.djangoproject.com/en/4.2/ref/models/instances/) in models.py  
 - [Django UserCreationForm](https://www.javatpoint.com/django-usercreationform>) Creating New Users 
-- [Advanced User Profile creation using allauth/signals](<https://dev.to/thepylot/create-advanced-user-sign-up-view-in-django-step-by-step-k9m)
-- [Override Django's save method](https://www.sankalpjonna.com/learn-django/how-to-override-the-save-method-in-your-django-models)
-- TypeError Datetime object issue for same day bookings - [#1](https://bobbyhadz.com/blog/python-check-if-variable-is-datetime-object)
-                                                      - [#2](https://bobbyhadz.com/blog/python-typeerror-datetime-datetime-object-is-not-callable#:~:text=The%20Python%20%22TypeError%3A%20'datetime,and%20the%20built%2Din%20classes.)
-- Find the [parent form element](https://www.geeksforgeeks.org/difference-between-dom-parentnode-and-parentelement-in-javascript/) of delete confirm button
-- [Scrollbar styling](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar2)
-- [Browser autofill styling overrule](https://stackoverflow.com/questions/2338102/override-browser-form-filling-and-input-highlighting-with-html-css)
+difference-between-dom-parentnode-and-parentelement-in-javascript/) of delete confirm button
 - [Django Docs](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.ModelAdmin.readonly_fields) to make model item readonly for search function showing deleted articles
 - [Django cleaned data how to](https://overiq.com/django-1-10/django-form-basics/?utm_content=cmp-true)
 
@@ -611,16 +629,9 @@ The following blogs/tutorials complemented my learning for this project, alongsi
 The following sites were used to gather the photographic media used in GetLostInPeru:
 
 - [Pexels](https://www.pexels.com/)
-- [Unsplash](https://unsplash.com/)
- <details>
-   <summary>Credit to the following photographers</summary>
-   
-  
+- [Studio Canal](https://www.pexels.com/)
 
-  <details>
-
-### Additional reading/tutorials/books/blogs
-
+ Most of the photos shown on the blog are my property.
 
 
 ## Acknowledgements
@@ -628,11 +639,9 @@ The following sites were used to gather the photographic media used in GetLostIn
 Code Institute 
 
 - [Amy Richardson](https://github.com/amylour) - Learning Facilitator
-- [Mark Briscoe](https://github.com/mbriscoe) - Subject Matter Expert
 - [John Rearden](https://github.com/johnrearden) - Coding Coach
+- [Mark Briscoe](https://github.com/mbriscoe) - Coding Coach
 
 
 
-
-Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
