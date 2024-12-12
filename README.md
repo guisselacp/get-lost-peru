@@ -53,8 +53,6 @@ For Admin access with relevant sign-in information: [GetLostInPeru Admin](https:
   - [Cloudinary API](#cloudinary-api)
   - [Elephant SQL](#elephant-sql)
   - [Heroku deployment](#heroku-deployment)
-  - [Clone project](#clone-project)
-  - [Fork Project](#fork-project)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -305,6 +303,7 @@ GetLostInPeru was created with the idea of ​​encouraging visits to Peru, so 
 | Home Page | Visible           | Visible         |
 | Blog |Visible but not interactable via 'Likes/Comments', 'Add Post' button not visible   | Visable   |
 | About     | Visable | Visable |
+| My_Posts   | Not Visable | Visable |
 
 
 ## CRUD Functionality
@@ -484,7 +483,6 @@ Further information is available in the [requirements.txt file](requirements.txt
 
 ## Tools & Programs
 
-- [Convertio](https://convertio.co/) for file conversion to PNG, WEBP.
 - [Lucidchart](https://www.lucidchart.com/pages) for ERD (entity relationship diagram) creation.
 - [Trello](https://www.trello.com) for intial project agile planning.
 - [Favicon](https://favicon.io/) for converting an icon into favicon.
@@ -552,7 +550,7 @@ os.path.join(BASE_DIR, 'templates', 'allauth')
 
 - Create the media, static and templates directories in top level of project file in IDE workspace.
 
-11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn freefido.wsgi```
+11. A **Procfile** must be created within the project repo for Heroku deployment with the following placed within it: ```web: gunicorn getlostinperu.wsgi```
 12. Make the necessary migrations again.
 
 ## Cloudinary API 
